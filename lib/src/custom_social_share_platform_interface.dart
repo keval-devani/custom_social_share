@@ -24,22 +24,30 @@ abstract class CustomSocialSharePlatform extends PlatformInterface {
     _instance = instance;
   }
 
+  /// copy text [content] to clipboard
   Future<bool> copy(String content) {
     throw UnimplementedError('copy() has not been implemented.');
   }
 
+  /// open system UI to share text [content]
   Future<bool> toAll(String content) {
     throw UnimplementedError('toAll() has not been implemented.');
   }
 
+  /// share text [content] with social apps
+  /// [shareWith] is [ShareWith] different type of default apps
   Future<bool> to(ShareWith shareWith, String content) {
     throw UnimplementedError('to() has not been implemented.');
   }
 
+  /// return list of default [ShareWith] installed apps
   Future<List<ShareWith>> getInstalledAppsForShare() {
     throw UnimplementedError('getInstalledAppsForShare() has not been implemented.');
   }
 
+  /// custom app share only for Android
+  /// [package] is android application id
+  /// text [content] to share
   Future<bool> customApp(String package, String content) {
     throw UnimplementedError('customApp() has not been implemented.');
   }

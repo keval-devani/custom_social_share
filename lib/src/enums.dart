@@ -1,3 +1,4 @@
+/// number of apps to share content
 enum ShareWith {
   sms('sms'),
   email('email'),
