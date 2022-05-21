@@ -42,7 +42,8 @@ abstract class CustomSocialSharePlatform extends PlatformInterface {
 
   /// return list of default [ShareWith] installed apps
   Future<List<ShareWith>> getInstalledAppsForShare() {
-    throw UnimplementedError('getInstalledAppsForShare() has not been implemented.');
+    throw UnimplementedError(
+        'getInstalledAppsForShare() has not been implemented.');
   }
 
   /// custom app share only for Android

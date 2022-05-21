@@ -14,22 +14,27 @@ class MethodChannelCustomSocialShare extends CustomSocialSharePlatform {
 
   @override
   Future<bool> copy(String content) {
-    return methodChannel.invokeMethod<bool>('copy', {"content": content}).then<bool>((bool? value) => value ?? false);
+    return methodChannel.invokeMethod<bool>('copy',
+        {"content": content}).then<bool>((bool? value) => value ?? false);
   }
 
   @override
   Future<bool> toAll(String content) {
-    return methodChannel.invokeMethod<bool>('toAll', {"content": content}).then<bool>((bool? value) => value ?? false);
+    return methodChannel.invokeMethod<bool>('toAll',
+        {"content": content}).then<bool>((bool? value) => value ?? false);
   }
 
   @override
   Future<bool> to(ShareWith shareWith, String content) {
-    return methodChannel.invokeMethod<bool>(shareWith.value, {"content": content}).then<bool>((bool? value) => value ?? false);
+    return methodChannel.invokeMethod<bool>(shareWith.value,
+        {"content": content}).then<bool>((bool? value) => value ?? false);
   }
 
   @override
   Future<List<ShareWith>> getInstalledAppsForShare() {
-    return methodChannel.invokeMapMethod<String, bool>('getInstalledApps').then((map) {
+    return methodChannel
+        .invokeMapMethod<String, bool>('getInstalledApps')
+        .then((map) {
       if (map == null) return [];
       map.removeWhere((key, value) => !value);
       return map.keys
@@ -49,7 +54,9 @@ class MethodChannelCustomSocialShare extends CustomSocialSharePlatform {
   @override
   Future<bool> customApp(String package, String content) {
     if (!Platform.isAndroid) return Future.value(false);
-    return methodChannel
-        .invokeMethod<bool>('customApp', {"package": package, "content": content}).then<bool>((bool? value) => value ?? false);
+    return methodChannel.invokeMethod<bool>('customApp', {
+      "package": package,
+      "content": content
+    }).then<bool>((bool? value) => value ?? false);
   }
 }

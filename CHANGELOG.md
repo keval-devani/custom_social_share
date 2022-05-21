@@ -1,4 +1,4 @@
-## 1.0.1
+## 1.0.2
 
 * documentation and format issue fix
 
