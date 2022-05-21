@@ -18,7 +18,7 @@ Please use the latest version of package
 dependencies:
   ...
   
-  custom_social_share: ^1.0.0
+  custom_social_share: ^latest_version
 ```
 
 ## Setup
