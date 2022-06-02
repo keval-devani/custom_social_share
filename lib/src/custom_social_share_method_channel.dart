@@ -13,9 +13,8 @@ class MethodChannelCustomSocialShare extends CustomSocialSharePlatform {
   final methodChannel = const MethodChannel('custom_social_share');
 
   @override
-  Future<bool> copy(String content) {
-    return methodChannel.invokeMethod<bool>('copy',
-        {"content": content}).then<bool>((bool? value) => value ?? false);
+  Future<void> copy(String content) {
+    return Clipboard.setData(ClipboardData(text: content));
   }
 
   @override
@@ -26,7 +25,7 @@ class MethodChannelCustomSocialShare extends CustomSocialSharePlatform {
 
   @override
   Future<bool> to(ShareWith shareWith, String content) {
-    return methodChannel.invokeMethod<bool>(shareWith.value,
+    return methodChannel.invokeMethod<bool>(shareWith.name,
         {"content": content}).then<bool>((bool? value) => value ?? false);
   }
 
@@ -39,12 +38,11 @@ class MethodChannelCustomSocialShare extends CustomSocialSharePlatform {
       map.removeWhere((key, value) => !value);
       return map.keys
           .map((e) {
-            for (var item in ShareWith.values) {
-              if (e == item.value) {
-                return item;
-              }
+            try {
+              ShareWith.values.byName(e);
+            } catch (e) {
+              return null;
             }
-            return null;
           })
           .whereType<ShareWith>()
           .toList();

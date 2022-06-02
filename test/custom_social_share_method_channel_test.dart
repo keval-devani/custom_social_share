@@ -18,7 +18,7 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('copy', () async {
-    expect(await platform.copy('success'), true);
+  test('toAll', () async {
+    expect(await platform.toAll('success'), true);
   });
 }

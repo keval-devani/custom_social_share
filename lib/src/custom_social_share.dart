@@ -5,7 +5,7 @@ import 'custom_social_share_platform_interface.dart';
 /// CustomSocialShare to copy content to clipboard and share text
 class CustomSocialShare {
   /// copy text [content] to clipboard
-  Future<bool> copy(String content) {
+  Future<void> copy(String content) {
     return CustomSocialSharePlatform.instance.copy(content);
   }
 

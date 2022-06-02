@@ -2,16 +2,12 @@ package com.kd.custom_social_share
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
-import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.NonNull
 import androidx.core.app.ShareCompat
-import androidx.core.content.ContextCompat
-
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
@@ -72,13 +68,6 @@ class CustomSocialSharePlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         val content: String? = call.argument("content")
         when (call.method) {
-
-            "copy" -> {
-                val clipboard = ContextCompat.getSystemService(mActivity, ClipboardManager::class.java)
-                val clip = ClipData.newPlainText("", content)
-                clipboard?.setPrimaryClip(clip)
-                result.success(true)
-            }
 
             "sms" -> {
                 val intent = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:")).apply {

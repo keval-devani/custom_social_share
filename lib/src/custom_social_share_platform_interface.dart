@@ -25,7 +25,7 @@ abstract class CustomSocialSharePlatform extends PlatformInterface {
   }
 
   /// copy text [content] to clipboard
-  Future<bool> copy(String content) {
+  Future<void> copy(String content) {
     throw UnimplementedError('copy() has not been implemented.');
   }
 

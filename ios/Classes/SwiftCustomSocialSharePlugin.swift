@@ -18,12 +18,6 @@ public class SwiftCustomSocialSharePlugin: NSObject, FlutterPlugin {
         
         switch call.method {
             
-        case "copy":
-            let pasteboard = UIPasteboard.general
-            pasteboard.string = content
-            result(NSNumber(value: true))
-            break
-            
         case "sms":
             let urlSchema = "sms:?&body=\(content)"
             launchURL(hookUrl: urlSchema, result: result)
@@ -48,8 +42,6 @@ public class SwiftCustomSocialSharePlugin: NSObject, FlutterPlugin {
         case "getInstalledApps":
             
             var installedApps: [String: Bool] = [:]
-            
-            installedApps["copy"] = true
             
             installedApps["sms"] = canOpenApp(appName: "sms")
             installedApps["email"] = canOpenApp(appName: "mailto")

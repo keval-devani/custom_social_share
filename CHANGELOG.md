@@ -1,3 +1,8 @@
+## 1.0.3
+
+* used flutter copy function
+* changes in ShareWith enum
+
 ## 1.0.2
 
 * documentation and format issue fix
