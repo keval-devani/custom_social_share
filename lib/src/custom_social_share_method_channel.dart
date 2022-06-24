@@ -30,22 +30,12 @@ class MethodChannelCustomSocialShare extends CustomSocialSharePlatform {
   }
 
   @override
-  Future<List<ShareWith>> getInstalledAppsForShare() {
+  Future<Map> getInstalledAppsForShare() {
     return methodChannel
         .invokeMapMethod<String, bool>('getInstalledApps')
         .then((map) {
-      if (map == null) return [];
-      map.removeWhere((key, value) => !value);
-      return map.keys
-          .map((e) {
-            try {
-              ShareWith.values.byName(e);
-            } catch (e) {
-              return null;
-            }
-          })
-          .whereType<ShareWith>()
-          .toList();
+      if (map == null) return {};
+      return map;
     });
   }
 
