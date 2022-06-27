@@ -41,7 +41,7 @@ abstract class CustomSocialSharePlatform extends PlatformInterface {
   }
 
   /// return list of default [ShareWith] installed apps
-  Future<Map> getInstalledAppsForShare() {
+  Future<Map<String, bool>> getInstalledAppsForShare() {
     throw UnimplementedError(
         'getInstalledAppsForShare() has not been implemented.');
   }

@@ -21,7 +21,7 @@ class CustomSocialShare {
   }
 
   /// return list of default [ShareWith] installed apps
-  Future<Map> getInstalledAppsForShare() async {
+  Future<Map<String, bool>> getInstalledAppsForShare() async {
     return CustomSocialSharePlatform.instance.getInstalledAppsForShare();
   }
 

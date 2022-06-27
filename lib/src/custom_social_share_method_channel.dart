@@ -30,7 +30,7 @@ class MethodChannelCustomSocialShare extends CustomSocialSharePlatform {
   }
 
   @override
-  Future<Map> getInstalledAppsForShare() {
+  Future<Map<String, bool>> getInstalledAppsForShare() {
     return methodChannel
         .invokeMapMethod<String, bool>('getInstalledApps')
         .then((map) {
