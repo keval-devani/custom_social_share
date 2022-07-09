@@ -46,7 +46,7 @@ Make sure you add below value in url scheme in your plist file
     <string>tg</string>
     <string>twitter</string>
     <string>viber</string>
-    <string>wechat</string>
+    <string>weixin</string>
     <string>whatsapp</string>
 </array>
 ```

@@ -1,3 +1,7 @@
+## 1.0.4
+
+* Platform exception fix #3
+
 ## 1.0.3
 
 * used flutter copy function

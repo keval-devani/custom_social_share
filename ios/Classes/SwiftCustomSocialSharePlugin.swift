@@ -58,8 +58,8 @@ public class SwiftCustomSocialSharePlugin: NSObject, FlutterPlugin {
             installedApps["telegram"] = canOpenApp(appName: "tg")
             installedApps["twitter"] = canOpenApp(appName: "twitter")
             installedApps["viber"] = canOpenApp(appName: "viber")
-            installedApps["weChat"] = canOpenApp(appName: "wechat")
-            installedApps["whatsApp"] = canOpenApp(appName: "whatsapp")
+            installedApps["wechat"] = canOpenApp(appName: "weixin")
+            installedApps["whatsapp"] = canOpenApp(appName: "whatsapp")
             
             result(installedApps)
             
@@ -125,11 +125,12 @@ public class SwiftCustomSocialSharePlugin: NSObject, FlutterPlugin {
             launchURL(hookUrl: urlSchema, result: result)
             break
             
-        case "weChat":
-            
+        case "wechat":
+            let urlSchema = "weixin://dl/posts?text=\(content)"
+            launchURL(hookUrl: urlSchema, result: result)
             break
             
-        case "whatsApp":
+        case "whatsapp":
             let urlSchema = "whatsapp://send?text=\(content)"
             launchURL(hookUrl: urlSchema, result: result)
             break

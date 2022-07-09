@@ -40,8 +40,8 @@ class CustomSocialSharePlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
         "telegram" to "org.telegram.messenger",
         "twitter" to "com.twitter.android",
         "viber" to "com.viber.voip",
-        "weChat" to "com.tencent.mm",
-        "whatsApp" to "com.whatsapp",
+        "wechat" to "com.tencent.mm",
+        "whatsapp" to "com.whatsapp",
     )
 
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
