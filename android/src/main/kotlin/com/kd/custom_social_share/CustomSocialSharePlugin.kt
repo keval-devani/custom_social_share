@@ -32,7 +32,7 @@ class CustomSocialSharePlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
         "facebookMessengerLite" to "com.facebook.mlite",
         "instagram" to "com.instagram.android",
         "line" to "jp.naver.line.android",
-        "linkedIn" to "com.linkedin.android",
+        "linkedin" to "com.linkedin.android",
         "reddit" to "com.reddit.frontpage",
         "skype" to "com.skype.raider",
         "slack" to "com.Slack",
@@ -66,7 +66,7 @@ class CustomSocialSharePlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
     override fun onDetachedFromActivity() {}
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-        val content: String? = call.argument("content")
+        val content: String = call.argument("content")
         when (call.method) {
 
             "sms" -> {
