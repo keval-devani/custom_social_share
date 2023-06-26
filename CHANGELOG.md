@@ -1,3 +1,7 @@
+## 1.0.5
+
+* LinkedIn sharing fix #4
+
 ## 1.0.4
 
 * Platform exception fix #3

@@ -50,7 +50,7 @@ public class SwiftCustomSocialSharePlugin: NSObject, FlutterPlugin {
             installedApps["facebookMessenger"] = canOpenApp(appName: "fb-messenger")
             installedApps["instagram"] = canOpenApp(appName: "instagram")
             installedApps["line"] = canOpenApp(appName: "line")
-            installedApps["linkedIn"] = canOpenApp(appName: "linkedin")
+            installedApps["linkedin"] = canOpenApp(appName: "linkedin")
             installedApps["reddit"] = canOpenApp(appName: "reddit")
             installedApps["skype"] = canOpenApp(appName: "skype")
             installedApps["slack"] = canOpenApp(appName: "slack")
@@ -85,7 +85,7 @@ public class SwiftCustomSocialSharePlugin: NSObject, FlutterPlugin {
             launchURL(hookUrl: urlSchema, result: result)
             break
             
-        case "linkedIn":
+        case "linkedin":
             let urlSchema = "linkedin://text=\(content)"
             launchURL(hookUrl: urlSchema, result: result)
             break
