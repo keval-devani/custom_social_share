@@ -1,3 +1,7 @@
+## 1.0.6
+
+* Android inferred type fix and bump sdk
+
 ## 1.0.5
 
 * LinkedIn sharing fix #4
