@@ -1,6 +1,6 @@
 name: custom_social_share
 description: Flutter Plugin for sharing contents to particular social media app or all.
-version: 1.0.6
+version: 1.0.7
 homepage: https://github.com/keval-devani/custom_social_share
 
 environment:
@@ -10,12 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  plugin_platform_interface: ^2.1.4
+  plugin_platform_interface: ^2.1.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.1
+  flutter_lints: ^2.0.2
 
 flutter:
   plugin:
