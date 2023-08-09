@@ -6,7 +6,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
-import androidx.annotation.NonNull
 import androidx.core.app.ShareCompat
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -44,12 +43,12 @@ class CustomSocialSharePlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
         "whatsapp" to "com.whatsapp",
     )
 
-    override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+    override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         channel = MethodChannel(flutterPluginBinding.binaryMessenger, "custom_social_share")
         channel.setMethodCallHandler(this)
     }
 
-    override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
+    override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         channel.setMethodCallHandler(null)
     }
 
@@ -65,8 +64,8 @@ class CustomSocialSharePlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
 
     override fun onDetachedFromActivity() {}
 
-    override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-        val content: String = call.argument("content")
+    override fun onMethodCall(call: MethodCall, result: Result) {
+        val content: String? = call.argument("content")
         when (call.method) {
 
             "sms" -> {

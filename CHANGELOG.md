@@ -1,3 +1,7 @@
+## 1.0.7
+
+* Android inferred type issue fixed
+
 ## 1.0.6
 
 * Android inferred type fix and bump sdk
