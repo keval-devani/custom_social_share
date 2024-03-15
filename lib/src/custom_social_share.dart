@@ -1,6 +1,5 @@
-import 'package:custom_social_share/src/enums.dart';
-
 import 'custom_social_share_platform_interface.dart';
+import 'enums.dart';
 
 /// CustomSocialShare to copy content to clipboard and share text
 class CustomSocialShare {

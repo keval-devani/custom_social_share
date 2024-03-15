@@ -1,4 +1,4 @@
-# custom_social_share
+# [custom_social_share](https://pub.dev/packages/custom_social_share)
 
 Flutter plugin for sharing text content to most popular social media apps.
 

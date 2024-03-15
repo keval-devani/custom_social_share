@@ -9,13 +9,13 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 Flutter Plugin for sharing contents to particular social media app or all.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/keval-devani/custom_social_share'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'KD' => 'kevaldevani101@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.platform = :ios, '10.0'
+  s.platform = :ios, '11.0'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }

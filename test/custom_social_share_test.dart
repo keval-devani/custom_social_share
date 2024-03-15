@@ -41,9 +41,6 @@ void main() {
         MockCustomSocialSharePlatform();
     CustomSocialSharePlatform.instance = fakePlatform;
 
-    // expect(await customSocialSharePlugin.copy('success'), true);
-    // expect(await customSocialSharePlugin.copy('other'), false);
-
     expect(await customSocialSharePlugin.toAll('success'), true);
     expect(await customSocialSharePlugin.toAll('other'), false);
 

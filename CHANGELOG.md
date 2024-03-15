@@ -1,3 +1,9 @@
+## 1.0.8
+
+* Bump to latest flutter SDK
+* Rename Twitter to X 🚀
+* Email content body issue fix #11
+
 ## 1.0.7
 
 * Android inferred type issue fixed

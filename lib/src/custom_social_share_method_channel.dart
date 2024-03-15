@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:custom_social_share/src/enums.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'custom_social_share_platform_interface.dart';
+import 'enums.dart';
 
 /// An implementation of [CustomSocialSharePlatform] that uses method channels.
 class MethodChannelCustomSocialShare extends CustomSocialSharePlatform {

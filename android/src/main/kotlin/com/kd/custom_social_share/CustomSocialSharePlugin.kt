@@ -37,7 +37,7 @@ class CustomSocialSharePlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
         "slack" to "com.Slack",
         "snapchat" to "com.snapchat.android",
         "telegram" to "org.telegram.messenger",
-        "twitter" to "com.twitter.android",
+        "x" to "com.twitter.android",
         "viber" to "com.viber.voip",
         "wechat" to "com.tencent.mm",
         "whatsapp" to "com.whatsapp",
@@ -65,7 +65,7 @@ class CustomSocialSharePlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
     override fun onDetachedFromActivity() {}
 
     override fun onMethodCall(call: MethodCall, result: Result) {
-        val content: String? = call.argument("content")
+        val content: String = call.argument("content")
         when (call.method) {
 
             "sms" -> {
@@ -77,7 +77,7 @@ class CustomSocialSharePlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
             }
 
             "email" -> {
-                callIntent(Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:?subject=$content")), result)
+                callIntent(Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:?body=$content")), result)
             }
 
             "toAll" -> {

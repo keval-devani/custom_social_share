@@ -1,7 +1,7 @@
-import 'package:custom_social_share/src/enums.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'custom_social_share_method_channel.dart';
+import 'enums.dart';
 
 abstract class CustomSocialSharePlatform extends PlatformInterface {
   /// Constructs a CustomSocialSharePlatform.

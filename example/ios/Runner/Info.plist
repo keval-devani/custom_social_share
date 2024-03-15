@@ -41,26 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
-	<key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fb</string>
-        <string>fb-messenger</string>
-        <string>instagram</string>
-        <string>line</string>
-        <string>linkedin</string>
-        <string>reddit</string>
-        <string>skype</string>
-        <string>slack</string>
-        <string>snapchat</string>
-        <string>tg</string>
-        <string>twitter</string>
-        <string>viber</string>
-        <string>wechat</string>
-        <string>whatsapp</string>
-    </array>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 </dict>
 </plist>

@@ -14,7 +14,7 @@ enum ShareWith {
   slack,
   snapchat,
   telegram,
-  twitter,
+  x,
   viber,
   wechat,
   whatsapp,
