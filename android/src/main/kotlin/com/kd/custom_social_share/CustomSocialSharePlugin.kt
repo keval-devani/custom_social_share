@@ -65,7 +65,7 @@ class CustomSocialSharePlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
     override fun onDetachedFromActivity() {}
 
     override fun onMethodCall(call: MethodCall, result: Result) {
-        val content: String? = call.argument("content")
+        var content: String? = call.argument("content")
         if(content==null){
            content=""
         }
