@@ -1,3 +1,7 @@
+## 1.0.9
+
+* fix #14
+
 ## 1.0.8
 
 * Bump to latest flutter SDK

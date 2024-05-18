@@ -1,6 +1,6 @@
 name: custom_social_share
 description: "Flutter plugin for sharing text content to most popular social media apps."
-version: 1.0.8
+version: 1.0.9
 homepage: https://github.com/keval-devani/custom_social_share
 
 environment:
