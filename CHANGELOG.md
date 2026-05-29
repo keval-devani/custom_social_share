@@ -1,3 +1,9 @@
+## 1.1.0
+
+* Bump to latest flutter SDK
+* Added Microsoft Teams
+* Remove Skype
+
 ## 1.0.9
 
 * fix #14

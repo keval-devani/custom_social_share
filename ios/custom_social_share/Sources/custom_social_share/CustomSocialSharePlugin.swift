@@ -2,11 +2,11 @@ import Flutter
 import UIKit
 
 public class CustomSocialSharePlugin: NSObject, FlutterPlugin {
-    public static func register(with registrar: FlutterPluginRegistrar) {
-        let channel = FlutterMethodChannel(name: "custom_social_share", binaryMessenger: registrar.messenger())
-        let instance = CustomSocialSharePlugin()
-        registrar.addMethodCallDelegate(instance, channel: channel)
-    }
+  public static func register(with registrar: FlutterPluginRegistrar) {
+    let channel = FlutterMethodChannel(name: "custom_social_share", binaryMessenger: registrar.messenger())
+    let instance = CustomSocialSharePlugin()
+    registrar.addMethodCallDelegate(instance, channel: channel)
+  }
 
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         let content: String
@@ -52,7 +52,7 @@ public class CustomSocialSharePlugin: NSObject, FlutterPlugin {
             installedApps["line"] = canOpenApp(appName: "line")
             installedApps["linkedin"] = canOpenApp(appName: "linkedin")
             installedApps["reddit"] = canOpenApp(appName: "reddit")
-            installedApps["skype"] = canOpenApp(appName: "skype")
+            installedApps["msteams"] = canOpenApp(appName: "msteams")
             installedApps["slack"] = canOpenApp(appName: "slack")
             installedApps["snapchat"] = canOpenApp(appName: "snapchat")
             installedApps["telegram"] = canOpenApp(appName: "tg")
@@ -95,8 +95,8 @@ public class CustomSocialSharePlugin: NSObject, FlutterPlugin {
             launchURL(hookUrl: urlSchema, result: result)
             break
 
-        case "skype":
-            let urlSchema = "skype:?chat&topic=\(content)"
+        case "msteams":
+            let urlSchema = "msteams:?chat&topic=\(content)"
             launchURL(hookUrl: urlSchema, result: result)
             break
 

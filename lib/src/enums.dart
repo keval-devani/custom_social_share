@@ -10,7 +10,7 @@ enum ShareWith {
   line,
   linkedin,
   reddit,
-  skype,
+  msteams,
   slack,
   snapchat,
   telegram,

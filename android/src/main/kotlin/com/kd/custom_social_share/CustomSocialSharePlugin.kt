@@ -33,7 +33,7 @@ class CustomSocialSharePlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
         "line" to "jp.naver.line.android",
         "linkedin" to "com.linkedin.android",
         "reddit" to "com.reddit.frontpage",
-        "skype" to "com.skype.raider",
+        "msteams" to "com.microsoft.teams",
         "slack" to "com.Slack",
         "snapchat" to "com.snapchat.android",
         "telegram" to "org.telegram.messenger",

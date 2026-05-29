@@ -16,10 +16,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.from(
-          colorScheme: const ColorScheme.light(), useMaterial3: true),
-      darkTheme: ThemeData.from(
-          colorScheme: const ColorScheme.dark(), useMaterial3: true),
+      theme: ThemeData.from(colorScheme: const ColorScheme.light(), useMaterial3: true),
+      darkTheme: ThemeData.from(colorScheme: const ColorScheme.dark(), useMaterial3: true),
       home: const HomeScreen(),
     );
   }
@@ -42,9 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter Social Share'),
-      ),
+      appBar: AppBar(title: const Text('Flutter Social Share')),
       body: Column(
         children: [
           SwitchListTile.adaptive(
@@ -77,38 +73,34 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: const Text('Copy'),
                         onPressed: () {
                           _share.copy(_msg).then((value) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                    content:
-                                        Text('Copied to your clipboard !')));
+                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Copied to your clipboard !')));
                           });
                         },
                       ),
                       ElevatedButton(
                         child: const Text('All'),
                         onPressed: () {
-                          _share.toAll(_msg).then((value) =>
-                              debugPrint("_MyAppState.build: $value"));
+                          _share.toAll(_msg).then((value) => debugPrint("_MyAppState.build: $value"));
                         },
                       ),
                       ElevatedButton(
                         child: const Text('Custom App'),
                         onPressed: () {
                           _share
-                              .customApp(
-                                  'com.google.android.apps.dynamite', _msg)
-                              .then((value) =>
-                                  debugPrint("_MyAppState.build: $value"));
+                              .customApp('com.google.android.apps.dynamite', _msg)
+                              .then((value) => debugPrint("_MyAppState.build: $value"));
                         },
                       ),
-                      for (var item in (_onlyInstalled
-                          ? _installedApps
-                          : ShareWith.values))
+                      for (var item in (_onlyInstalled ? _installedApps : ShareWith.values))
                         ElevatedButton(
                           child: Text(item.name),
                           onPressed: () {
-                            _share.to(item, _msg).then((value) =>
-                                debugPrint("_MyAppState.build: $value"));
+                            _share.to(item, _msg).then((value) {
+                              debugPrint("_MyAppState.build: $value");
+                              if (!value) {
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Not Installed')));
+                              }
+                            });
                           },
                         ),
                     ],
